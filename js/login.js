@@ -45,6 +45,7 @@ function validateName(){
 function validatePassword(){
     if(password.value.trim()==""){
         pswrderror.innerHTML="password cannot be empty"
+        pswrderror.style.border = "2px solid red";
         pswrderror.style.color="red"
         return false
     }
@@ -56,11 +57,13 @@ function validatePassword(){
 
     else if(password.value!=="12345"){
         pswrderror.innerHTML="invalid password"
+        pswrderror.style.border = "2px solid red";
         pswrderror.style.color="red"
         return false
     }
     else if(password.value==="12345"){
         pswrderror.innerHTML="valid password"
+        pswrderror.style.border = "2px solid green";
         pswrderror.style.color="green"
         return true
     }
