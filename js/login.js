@@ -14,11 +14,7 @@ function validateName(){
         successIcon.style.opacity = "0";
         return false
     }
-    else if(username.value.length<2){
-        usererror.innerHTML="username cannot be empty"
-        usererror.style.color="red"
-        return false
-    }
+  
 
     else if(username.value!=="admin"){
         usererror.innerHTML=" invalid username"
@@ -50,12 +46,7 @@ function validatePassword(){
         pswrderror.style.color="red"
         return false
     }
-    else if(password.value.length<2){
-        pswrderror.innerHTML="password cannot be empty"
-        pswrderror.style.color="red"
-        return false
-    }
-
+    
     else if(password.value!=="12345"){
         pswrderror.innerHTML="invalid password"
         password.style.border = "2px solid red";
