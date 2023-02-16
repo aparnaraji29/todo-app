@@ -23,6 +23,7 @@ function validateName(){
     else if(username.value!=="admin"){
         usererror.innerHTML=" invalid username"
         usererror.style.color="red"
+        username.style.border = "2px solid red";
         failureIcon.style.opacity = "1";
         successIcon.style.opacity = "0";
         return false
@@ -45,7 +46,7 @@ function validateName(){
 function validatePassword(){
     if(password.value.trim()==""){
         pswrderror.innerHTML="password cannot be empty"
-        pswrderror.style.border = "2px solid red";
+        password.style.border = "2px solid red";
         pswrderror.style.color="red"
         return false
     }
@@ -57,13 +58,13 @@ function validatePassword(){
 
     else if(password.value!=="12345"){
         pswrderror.innerHTML="invalid password"
-        pswrderror.style.border = "2px solid red";
+        password.style.border = "2px solid red";
         pswrderror.style.color="red"
         return false
     }
     else if(password.value==="12345"){
         pswrderror.innerHTML="valid password"
-        pswrderror.style.border = "2px solid green";
+        password.style.border = "2px solid green";
         pswrderror.style.color="green"
         return true
     }
