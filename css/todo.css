@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* .logo{
+    width: 10%;
+} */
+ h3{
+    font-family: 'Iceberg', cursive;
+    color: white;
+}
+table th{
+    font-family: 'Train One', cursive;
+}
+
+#fetch-button{
+    cursor: pointer;
+}
