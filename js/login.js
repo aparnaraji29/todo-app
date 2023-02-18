@@ -14,7 +14,7 @@
 //         successIcon.style.opacity = "0";
 //         return false
 //     }
-  
+
 
 //     else if(username.value!=="admin"){
 //         usererror.innerHTML=" invalid username"
@@ -24,7 +24,7 @@
 //         successIcon.style.opacity = "0";
 //         return false
 //     }
-   
+
 //     else if(username.value==="admin"){
 //         usererror.innerHTML=" valid username"
 //         usererror.style.color="green"
@@ -33,8 +33,8 @@
 //         successIcon.style.opacity = "1";
 //         return true
 //     }
-   
-  
+
+
 // }
 
 
@@ -46,7 +46,7 @@
 //         pswrderror.style.color="red"
 //         return false
 //     }
-    
+
 //     else if(password.value!=="12345"){
 //         pswrderror.innerHTML="invalid password"
 //         password.style.border = "2px solid red";
@@ -59,7 +59,7 @@
 //         pswrderror.style.color="green"
 //         return true
 //     }
-   
+
 // }
 
 
@@ -93,7 +93,7 @@ function validateName(){
         successIcon.style.opacity = "0";
         return false
     }
-  
+
 
     else if(username.value!=="admin"){
         usererror.innerHTML=" invalid username"
@@ -103,7 +103,7 @@ function validateName(){
         successIcon.style.opacity = "0";
         return false
     }
-   
+
     else if(username.value==="admin"){
         usererror.innerHTML=" valid username"
         usererror.style.color="green"
@@ -112,8 +112,8 @@ function validateName(){
         successIcon.style.opacity = "1";
         return true
     }
-   
-  
+
+
 }
 
 
@@ -125,7 +125,7 @@ function validatePassword(){
         pswrderror.style.color="red"
         return false
     }
-    
+
     else if(password.value!=="12345"){
         pswrderror.innerHTML="invalid password"
         password.style.border = "2px solid red";
@@ -138,21 +138,52 @@ function validatePassword(){
         pswrderror.style.color="green"
         return true
     }
-   
+
 }
-function submitForm(event) {
-    event.preventDefault();
+// function submitForm(event) {
 
-    // Check if the inputs are valid
-    if (validateName() && validatePassword()) {
-        // If the inputs are valid, redirect to another page
-        return true // Replace this with the URL of the page you want to redirect to
-    } else {
-        // If the inputs are invalid, display an error message
-     return false
-    }
-}
+//     event.preventDefault();
+
+//     // Check if the inputs are valid
+//     if (validateName() && validatePassword()) {
+//         // If the inputs are valid, redirect to another page
+//         return true // Replace this with the URL of the page you want to redirect to
+//     } else {
+//         // If the inputs are invalid, display an error message
+//      return false
+//     }
+// }
+
+		function validateForm() {
+			// Get the values of the username and password fields
+			var username = document.forms["loginForm"]["username"].value;
+			var password = document.forms["loginForm"]["password"].value;
+
+			// Define the regular expressions for the username and password
+			var usernameRegex = /^admin$/;
+			var passwordRegex = /^12345$/;
+
+			// Check if the username and password match the regular expressions
+			if (!usernameRegex.test(username)) {
+				alert("Invalid username");
+				return false;
+			}
+			if (!passwordRegex.test(password)) {
+				alert("Invalid password");
+				return false;
+                
+			}
+            if (usernameRegex.test(username)&&passwordRegex.test(password)) {
+				// alert("Invalid username");
+				return true;
+            }
+			// Redirect to another page
+			//  window.location.href = "home.html";
+		}
 
 
+
+
+ 
 
 
