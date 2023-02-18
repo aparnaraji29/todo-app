@@ -16,28 +16,28 @@
 
 
 
-   
+
 </head>
 <body>
 
     <div class="container">
         <div class="content">
           <div class="heading">
-          <h3>WELCOME TO TODOAPP</h3>  
+          <h3>WELCOME TO TODOAPP</h3>
           </div>
           <div class="image"></div>
           <div class="text">
               Your Online Task Management Assistant
           </div>
         </div>
-        <form action="./html/home.html" name="loginForm"  id="form">
+        <form  action="./html/home.html" name="loginForm"  id="form">
           <div class="social">
             <div class="title">Get Started</div>
             <div class="question">
               Already Have an Account? <br />
               <span>Sign In</span>
             </div>
-  
+
             <div class="btn">
               <div class="btn-1">
                 <img
@@ -52,56 +52,48 @@
                 Sign Up
               </div>
             </div>
-  
+
             <div class="or">Or</div>
           </div>
-  
-          <!-- /** 
+
+          <!-- /**
             * ! user name Input here
            **/ -->
-  
+
           <div>
             <label for="username">User Name</label>
             <i class="fas fa-user"></i>
-            <input onkeyup="validateName()" type="text" name="username"  id="username"  placeholder="Aparna" required >
+            <input onkeyup="validateName();" type="text" name="username"  id="username"  placeholder="Aparna" required >
             <i class="fas fa-exclamation-circle failure-icon"></i>
             <i class="far fa-check-circle success-icon"></i>
             <div id="user-error"></div>
           </div>
-  
-          
-          <!-- /** 
+
+
+          <!-- /**
             * ! password Input here
            **/ -->
-  
-  
+
+
           <div>
             <label for="password">Password</label>
             <i class="fas fa-lock"></i>
-            <input onkeyup="validatePassword()" type="password" name="password" id="password" placeholder="Password here" required>
+            <input onkeyup="validatePassword();" type="password" name="password" id="password" placeholder="Password here" required>
             <i class="fas fa-exclamation-circle failure-icon"></i>
             <i class="far fa-check-circle success-icon"></i>
             <span id="pswrd-error"></span>
           </div>
 
 
-          <!-- <form  onsubmit="return validateForm()">
-            <label for="username">Username:</label>
-            <input type="text" name="username" id="username" required>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required>
-            <br>
-            <input type="submit" value="Login">
-          </form> -->
+          
 
 
-          <button onclick=" return validateform()" type="submit" id="submit">Login</button>
+          <button onclick=" return validateForm();" type="submit" id="submit">Login</button>
         </form>
       </div>
     </body>
     <script src="./js/login.js"></script>
 
-   
+
 </body>
 </html>
